@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Course - Learning Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Math Course - Advanced Calculus, Algebra, and Topology</h1>
+    </header>
+    <nav id="skill-nav">
+        <button class="nav-button" onclick="navigateTo('index.html')">Home</button>
+        <button class="nav-button" onclick="navigateTo('math.html')">Math</button>
+        <button class="nav-button" onclick="navigateTo('art.html')">Art</button>
+        <button class="nav-button" onclick="navigateTo('music.html')">Music</button>
+        <button class="nav-button" onclick="navigateTo('webdev.html')">Web Dev</button>
+    </nav>
+    <main>
+        <h2>7-Day Intensive Math Course</h2>
+        <div id="course-content">
+            <!-- Day 1 -->
+            <div class="day-section">
+                <button class="day-header" onclick="toggleDay('day1')">Day 1: Advanced Calculus - Foundations and Limits</button>
+                <div class="day-content" id="day1">
+                    <ul>
+                        <li><input type="checkbox" id="day1-sub1" onclick="updateProgress('day1')"> <label for="day1-sub1">Limits, continuity, and differentiability</label></li>
+                        <li><input type="checkbox" id="day1-sub2" onclick="updateProgress('day1')"> <label for="day1-sub2">Fundamental Theorem of Calculus</label></li>
+                        <li><input type="checkbox" id="day1-sub3" onclick="updateProgress('day1')"> <label for="day1-sub3">Techniques of integration: substitution, integration by parts</label></li>
+                        <li><input type="checkbox" id="day1-sub4" onclick="updateProgress('day1')"> <label for="day1-sub4">Epsilon-delta definition of limits</label></li>
+                        <li><input type="checkbox" id="day1-sub5" onclick="updateProgress('day1')"> <label for="day1-sub5">Convergence and divergence of series</label></li>
+                        <li><input type="checkbox" id="day1-sub6" onclick="updateProgress('day1')"> <label for="day1-sub6">Taylor and Maclaurin series</label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-section">
+                <button class="day-header" onclick="toggleDay('day2')">Day 2: Advanced Calculus - Differential Equations</button>
+                <div class="day-content" id="day2">
+                    <ul>
+                        <li><input type="checkbox" id="day2-sub1" onclick="updateProgress('day2')"> <label for="day2-sub1">First-order ODEs: separable, linear, exact</label></li>
+                        <li><input type="checkbox" id="day2-sub2" onclick="updateProgress('day2')"> <label for="day2-sub2">Second-order ODEs: homogeneous and non-homogeneous</label></li>
+                        <li><input type="checkbox" id="day2-sub3" onclick="updateProgress('day2')"> <label for="day2-sub3">Systems of ODEs</label></li>
+                        <li><input type="checkbox" id="day2-sub4" onclick="updateProgress('day2')"> <label for="day2-sub4">Partial Differential Equations (PDEs)</label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-section">
+                <button class="day-header" onclick="toggleDay('day3')">Day 3: Advanced Algebra - Group Theory</button>
+                <div class="day-content" id="day3">
+                    <ul>
+                        <li><input type="checkbox" id="day3-sub1" onclick="updateProgress('day3')"> <label for="day3-sub1">Definition and examples of groups</label></li>
+                        <li><input type="checkbox" id="day3-sub2" onclick="updateProgress('day3')"> <label for="day3-sub2">Subgroups, cyclic groups, and cosets</label></li>
+                        <li><input type="checkbox" id="day3-sub3" onclick="updateProgress('day3')"> <label for="day3-sub3">Group homomorphisms and isomorphisms</label></li>
+                        <li><input type="checkbox" id="day3-sub4" onclick="updateProgress('day3')"> <label for="day3-sub4">Advanced topics in group theory</label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-section">
+                <button class="day-header" onclick="toggleDay('day4')">Day 4: Advanced Algebra - Ring and Field Theory</button>
+                <div class="day-content" id="day4">
+                    <ul>
+                        <li><input type="checkbox" id="day4-sub1" onclick="updateProgress('day4')"> <label for="day4-sub1">Definition and examples of rings</label></li>
+                        <li><input type="checkbox" id="day4-sub2" onclick="updateProgress('day4')"> <label for="day4-sub2">Ideals, quotient rings, and ring homomorphisms</label></li>
+                        <li><input type="checkbox" id="day4-sub3" onclick="updateProgress('day4')"> <label for="day4-sub3">Polynomial rings and factorization</label></li>
+                        <li><input type="checkbox" id="day4-sub4" onclick="updateProgress('day4')"> <label for="day4-sub4">Galois Theory</label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-section">
+                <button class="day-header" onclick="toggleDay('day5')">Day 5: Topology - Point-Set Topology</button>
+                <div class="day-content" id="day5">
+                    <ul>
+                        <li><input type="checkbox" id="day5-sub1" onclick="updateProgress('day5')"> <label for="day5-sub1">Topological spaces</label></li>
+                        <li><input type="checkbox" id="day5-sub2" onclick="updateProgress('day5')"> <label for="day5-sub2">Continuity and homeomorphisms</label></li>
+                        <li><input type="checkbox" id="day5-sub3" onclick="updateProgress('day5')"> <label for="day5-sub3">Separation axioms</label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-section">
+                <button class="day-header" onclick="toggleDay('day6')">Day 6: Topology - Algebraic Topology</button>
+                <div class="day-content" id="day6">
+                    <ul>
+                        <li><input type="checkbox" id="day6-sub1" onclick="updateProgress('day6')"> <label for="day6-sub1">Fundamental group</label></li>
+                        <li><input type="checkbox" id="day6-sub2" onclick="updateProgress('day6')"> <label for="day6-sub2">Homology theory</label></li>
+                        <li><input type="checkbox" id="day6-sub3" onclick="updateProgress('day6')"> <label for="day6-sub3">Cohomology and higher homotopy groups</label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-section">
+                <button class="day-header" onclick="toggleDay('day7')">Day 7: Capstone Project</button>
+                <div class="day-content" id="day7">
+                    <ul>
+                        <li><input type="checkbox" id="day7-sub1" onclick="updateProgress('day7')"> <label for="day7-sub1">Project planning</label></li>
+                        <li><input type="checkbox" id="day7-sub2" onclick="updateProgress('day7')"> <label for="day7-sub2">Execution</label></li>
+                        <li><input type="checkbox" id="day7-sub3" onclick="updateProgress('day7')"> <label for="day7-sub3">Presentation and reflection</label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div id="progress-section">
+                <h3>Progress Tracking</h3>
+                <p>Completed Days: <span id="completed-days">0</span>/7</p>
+                <p>Completion Percentage: <span id="completion-percentage">0</span>%</p>
+            </div>
+
+            <!-- Line Chart -->
+            <div id="chart-section">
+                <h3>Progress Over Time</h3>
+                <canvas id="progressChart"></canvas>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Learning Management System</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
